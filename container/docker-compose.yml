@@ -1,6 +1,7 @@
 version: "3.8"
 services:
-  va-backend:
+  # Must match the name of IMAGE and CONTAINER from the values.yml file
+  external-example:
     image: ${IMAGE}
     tty: true
     stdin_open: true

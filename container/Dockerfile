@@ -2,23 +2,23 @@ FROM node:12.8-alpine
 
 WORKDIR /
 
-
 # Path of the app within the docker container
 ARG DOC_APP_PATH=/app
 
+# Port to run the app on
+ARG DOC_APP_PORT=5000
+
+# Install serve for a quick and easy server
 RUN yarn global add serve
 
-# Copy over the package.json, and yarn.lock files
+# Copy over the app into the image
 COPY . /app
 
 # Expose container ports
-EXPOSE 19002
-EXPOSE 19006
-EXPOSE 60710
+EXPOSE $DOC_APP_PORT
 
 # Set the current directory to tap repo
 WORKDIR /$DOC_APP_PATH
 
-# Run the start script
-# Dont use the array syntax, so we have access to the DOC_CLI_PATH ENV
+# Start the server
 CMD [ "serve" ]

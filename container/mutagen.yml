@@ -1,7 +1,7 @@
 sync:
   tap:
-    alpha: "/keg/tap"
-    beta: "docker://tap/keg/tap"
+    alpha: "/keg-external-example"
+    beta: "docker://app"
     mode: "one-way-replica"
     ignore:
       vcs: true
@@ -10,6 +10,7 @@ sync:
         - "/core/base/assets/*"
         - "/.*"
         - "!/.storybook"
+        - "/container"
         - "!/.npmrc"
         - "*.lock"
         - "*.md"
