@@ -1,5 +1,6 @@
 sync:
-  tap:
+  # Must match the name of the docker-compose.yml service
+  external-example:
     alpha: "/keg-external-example"
     beta: "docker://app"
     mode: "one-way-replica"
