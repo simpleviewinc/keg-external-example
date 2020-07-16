@@ -22,4 +22,5 @@ services:
       - KEG_NM_INSTALL
       - NODE_ENV
     ports:
+      - 80:${DOC_APP_PORT}
       - ${DOC_APP_PORT}:${DOC_APP_PORT}
