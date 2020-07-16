@@ -10,7 +10,7 @@
 * Run the command `keg tap link kee` in your terminal
   * This will create a new linked tap for this repo
 
-## Run
+### Run
 * Run the command `keg kee start` in your terminal
   * Should start this app
 * Navigate to [kee.kegdev.xyz](http://kee.kegdev.xyz) in your browser
